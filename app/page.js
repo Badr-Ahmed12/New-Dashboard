@@ -1,7 +1,18 @@
+import Cards from "@/components/Cards";
+import DashboardCharts from "@/components/Dashboard";
+
+import Layout from "@/components/Layout";
+
 export default function Home() {
   return (
-    <div>
-    
-    </div>
+  <>  
+  <Layout>
+    <h1 className="text-4xl font-bold mb-6 font-sans">Dashboard</h1>
+    <Cards />
+    <DashboardCharts />
+  </Layout>
+  
+   </>
   );
 }
+

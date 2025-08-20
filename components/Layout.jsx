@@ -3,7 +3,7 @@ import { useState } from "react";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 
-export default function Layout() {
+export default function Layout({ children }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   return (
@@ -11,9 +11,12 @@ export default function Layout() {
       {/* Sidebar */}
       <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
 
-      {/* Main Content */}
+      {/* Header */}
       <div className="flex flex-col flex-1 overflow-y-auto">
         <Header onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
+
+        {/* Main Content :{children} */}
+         <main className="flex-1 p-6 bg-gray-50">{children}</main>
       </div>
     </div>
   );

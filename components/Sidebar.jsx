@@ -1,11 +1,8 @@
 "use client";
 import { useState } from "react";
-import { Home, Info, Phone, Menu, X, LucideIcon , UserRound , Mail  } from "lucide-react";
+import { Home, Info, Phone, Menu, X, UserRound, Mail } from "lucide-react";
 import { usePathname } from "next/navigation";
 
-
-
-// مكون NavItem منفصل
 function NavItem({ href, label, icon: Icon, active, isOpen }) {
   return (
     <a
@@ -22,7 +19,7 @@ function NavItem({ href, label, icon: Icon, active, isOpen }) {
   );
 }
 
-export default function Sidebar() {
+export default function SidebarLayout({ children }) {
   const [isOpen, setIsOpen] = useState(true);
   const pathname = usePathname();
 
@@ -31,7 +28,7 @@ export default function Sidebar() {
     { href: "/about", label: "About", icon: Info },
     { href: "/contact", label: "Contact", icon: Phone },
     { href: "/profile", label: "Profile", icon: UserRound },
-    { href: "/Massages", label: "Massages", icon: Mail }
+    { href: "/Massages", label: "Massages", icon: Mail },
   ];
 
   return (
@@ -77,6 +74,7 @@ export default function Sidebar() {
           {isOpen ? "© 2025 My App" : "©"}
         </div>
       </div>
+
 
       {/* Overlay للموبايل */}
       {isOpen && (
