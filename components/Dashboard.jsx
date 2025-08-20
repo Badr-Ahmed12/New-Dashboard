@@ -130,14 +130,7 @@ export default function DashboardCharts() {
   };
 
   return (
-    <div className="space-y-8">
-      {/* زرار Refresh */}
-      <button
-        onClick={randomizeData}
-        className="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
-      >
-        Refresh Data
-      </button>
+    <div className="space-y-8 mt-10">
 
       {/* Charts Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -25,13 +25,14 @@ export default function SidebarLayout({ children }) {
 
   const navItems = [
     { href: "/", label: "Home", icon: Home },
-    { href: "/about", label: "About", icon: Info },
-    { href: "/contact", label: "Contact", icon: Phone },
-    { href: "/profile", label: "Profile", icon: UserRound },
-    { href: "/Massages", label: "Massages", icon: Mail },
+    { href: "/About", label: "About", icon: Info },
+    { href: "/contect", label: "Contact", icon: Phone },
+    { href: "/Profile", label: "Profile", icon: UserRound },
+    { href: "/Masseges", label: "Massages", icon: Mail },
   ];
 
   return (
+    
     <div className="flex">
       {/* Sidebar */}
       <div
@@ -71,7 +72,7 @@ export default function SidebarLayout({ children }) {
 
         {/* Footer */}
         <div className="p-4 border-t border-blue-500 text-xs text-center text-gray-300">
-          {isOpen ? "© 2025 My App" : "©"}
+          {isOpen ? "© 2025 Badr Ahmed all rights reserved" : "©"}
         </div>
       </div>
 
