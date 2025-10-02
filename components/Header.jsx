@@ -51,8 +51,8 @@ export default function Header({ onToggleSidebar }) {
             </button>
 
             {showMessages && (
-              <div className="absolute right-0 mt-2 w-72 bg-white border rounded-lg shadow-lg overflow-hidden">
-                <div className="p-3 border-b font-semibold">Messages</div>
+              <div className="absolute right-0 mt-2 w-72 bg-white  rounded-lg shadow-lg overflow-hidden">
+                <div className="p-3 font-semibold">Messages</div>
                 <ul className="max-h-60 overflow-y-auto">
                   <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                     <p className="text-sm font-medium">John Doe</p>
@@ -82,8 +82,8 @@ export default function Header({ onToggleSidebar }) {
             </button>
 
             {showNotifications && (
-              <div className="absolute right-0 mt-2 w-72 bg-white border rounded-lg shadow-lg overflow-hidden">
-                <div className="p-3 border-b font-semibold">Notifications</div>
+              <div className="absolute right-0 mt-2 w-72 bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="p-3  font-semibold">Notifications</div>
                 <ul className="max-h-60 overflow-y-auto">
                   <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                     <p className="text-sm">New user registered</p>
@@ -115,9 +115,9 @@ export default function Header({ onToggleSidebar }) {
             </button>
 
             {showProfileMenu && (
-              <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg overflow-hidden">
+              <div className="absolute right-0 mt-2 w-48 bg-white  rounded-lg shadow-lg overflow-hidden">
                 <ul>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer"><Link  href="/profile">My Profile</Link></li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer"><Link  href="/Profile">My Profile</Link></li>
                   <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Settings</li>
                   <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-red-600">Logout</li>
                 </ul>

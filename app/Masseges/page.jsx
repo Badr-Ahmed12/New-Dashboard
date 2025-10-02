@@ -30,7 +30,16 @@ const messagesData = [
     time: "1d ago",
     content:
       "Hello,\n\nWe are glad to inform you that your leave request has been approved for the dates 22nd - 25th of August."
+  }, {
+    id: 4,
+    sender: "Ibrahiem Ahmed",
+    subject: "Friend",
+    preview: "Lorem ipsum dolor sit amet, consectetur",
+    time: "1d ago",
+    content:
+      "Hey Badr 👋,\n\n Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla veritatis impedit "
   }
+
 ];
 
 export default function MessagesPage() {
@@ -44,19 +53,19 @@ export default function MessagesPage() {
       {/* Main Layout */}
       <div className="flex flex-1 overflow-hidden">
         {/* Messages List */}
-        <div className="w-1/3 bg-white border-r overflow-y-auto">
+        <div className="w-1/3 bg-white   overflow-y-auto">
           {messagesData.map((msg) => (
             <div
               key={msg.id}
               onClick={() => setSelectedMessage(msg)}
-              className={`p-4 cursor-pointer transition border-b ${
+              className={`p-4 cursor-pointer transition m-5  shadow border-l-4 ${
                 selectedMessage.id === msg.id
                   ? "bg-blue-50 border-l-4 border-blue-600"
                   : "hover:bg-gray-50"
               }`}
             >
               <div className="flex justify-between items-center mb-1">
-                <h3 className="font-semibold text-gray-800">{msg.sender}</h3>
+                <h3 className="font-semibold text-gray-600">{msg.sender}</h3>
                 <span className="text-xs text-gray-400">{msg.time}</span>
               </div>
               <p className="text-sm font-medium text-gray-700">{msg.subject}</p>
@@ -72,7 +81,7 @@ export default function MessagesPage() {
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <h2 className="text-lg font-bold text-gray-800">
+                  <h2 className="text-lg font-bold text-gray-600">
                     {selectedMessage.subject}
                   </h2>
                   <p className="text-sm text-gray-500">{selectedMessage.sender}</p>

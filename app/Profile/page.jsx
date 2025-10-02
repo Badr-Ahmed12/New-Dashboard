@@ -1,6 +1,6 @@
 "use client";
 import Layout from "@/components/Layout";
-import { Mail, Phone, MapPin, Edit, User, Settings, Activity } from "lucide-react";
+import { Mail, Phone, MapPin, Edit, User, Settings, Activity , Check } from "lucide-react";
 
 export default function ProfilePage() {
   return (
@@ -25,14 +25,14 @@ export default function ProfilePage() {
         </div>
 
         {/* Tabs */}
-        <div className="flex gap-4 border-b pb-2 text-gray-600 font-medium">
-          <button className="flex items-center gap-2 text-blue-600 border-b-2 border-blue-600 pb-1">
+        <div className="flex gap-4 border-b  pb-2 text-gray-600 font-medium">
+          <button className="cursor-pointer flex items-center gap-2 text-blue-600 ">
             <User size={18} /> Overview
           </button>
-          <button className="flex items-center gap-2 hover:text-blue-600">
+          <button className="cursor-pointer flex items-center gap-2 hover:text-blue-600">
             <Settings size={18} /> Settings
           </button>
-          <button className="flex items-center gap-2 hover:text-blue-600">
+          <button className="cursor-pointer flex items-center gap-2 hover:text-blue-600">
             <Activity size={18} /> Activity
           </button>
         </div>
